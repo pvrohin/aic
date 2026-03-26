@@ -453,6 +453,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zenoh-rust-abi-1.7.2.1.85.0-h8619998_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.23.0-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
+      - conda: aic_data_collection_pipeline
+        build: hb0f4dca_0
       - conda: aic_example_policies
         build: hb0f4dca_0
       - conda: aic_interfaces/aic_control_interfaces
@@ -945,6 +947,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zenoh-rust-abi-1.7.2.1.85.0-h2abaa9c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.23.0-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - conda: aic_data_collection_pipeline
+        build: h60d57d3_0
       - conda: aic_example_policies
         build: h60d57d3_0
       - conda: aic_interfaces/aic_control_interfaces
@@ -7735,6 +7739,38 @@ packages:
   - ros-kilted-geometry-msgs
   - ros-kilted-std-msgs
   - ros-kilted-trajectory-msgs
+  - ros2-distro-mutex
+  - ros2-distro-mutex >=0.13.0,<0.14.0a0
+  - libgcc >=15
+  - libgcc >=15
+  - libstdcxx >=15
+  - python_abi 3.12.* *_cp312
+  - numpy >=1.23,<3
+  license: LicenseRef-Apache-2.0
+- conda: aic_data_collection_pipeline
+  name: ros-kilted-aic-data-collection-pipeline
+  version: 0.0.1
+  build: h60d57d3_0
+  subdir: osx-arm64
+  variants:
+    target_platform: osx-arm64
+  depends:
+  - pyyaml
+  - ros2-distro-mutex
+  - ros2-distro-mutex >=0.13.0,<0.14.0a0
+  - libcxx >=22
+  - python_abi 3.12.* *_cp312
+  - numpy >=1.23,<3
+  license: LicenseRef-Apache-2.0
+- conda: aic_data_collection_pipeline
+  name: ros-kilted-aic-data-collection-pipeline
+  version: 0.0.1
+  build: hb0f4dca_0
+  subdir: linux-64
+  variants:
+    target_platform: linux-64
+  depends:
+  - pyyaml
   - ros2-distro-mutex
   - ros2-distro-mutex >=0.13.0,<0.14.0a0
   - libgcc >=15
